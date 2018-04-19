@@ -1,0 +1,913 @@
+@button_orange: #c7552f; // Оранжевый цвет кнопок
+@color_green: #12636b; // Зеленый цвет
+@img_strip: url(../img/strip.jpg); // Фон - зеленая лента
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('../img/base_background.jpg');
+    p{
+        font-family: "SegoeUIRegular";
+        text-align: justify;
+    }
+    position: absolute;
+}
+
+.container {
+    position: relative;
+}
+
+.text_bgi {
+        background-image: @img_strip;
+        color: #fff;
+        font-family: "SegoeUIBold";
+}
+
+//  СТИЛИ КНОПОК и ФОРМ
+//  Стили кнопки "ОТПРАВИТЬ"
+
+.button {
+    float: right;
+    background: none;
+    border: 2px solid @button_orange;
+    color: @button_orange;
+    font-family: "SegoeUIBold";
+    font-size: 17px;
+    border-radius: 9px;
+    padding: 0 7px 2px 7px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    &:hover,
+    &:visited,
+    &:focus {
+        text-decoration: none;
+        color: @button_orange;
+    }
+    &:active {
+        color: #fff;
+        background-color: @button_orange;
+        text-decoration: none;
+    }
+    //  Стили кнопки "УЗНАТЬ БОЛЬШЕ"
+    &_more {
+        font-size: 16px;
+        border-radius: 6px;
+        padding: 0 12px 0 12px;
+        margin: 5px 0 20px 0;
+        float: right;
+    }
+    // Стили кнопки "БЫСТРАЯ РЕГИСТРАЦИЯ"
+    &_reg {
+        padding: 0 18px 2px 18px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        font-size: 13px;
+        margin-top: 15px;
+        
+    }
+}
+
+// Верхний блок
+// Верхний слайдер
+#slide123 {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    max-width: 1170px;
+}
+
+#slide_top1 {
+    background-image: url('../img/kron-food-bg.png');
+    background-size: cover;
+}
+#slide_top2 {
+    background-image: url('../img/slide_top2.jpg');
+    background-size: cover;
+}
+#slide_top3 {
+    background-image: url('../img/slider_top3.jpg');
+    background-size: cover;
+}
+
+#top {
+    height: 560px;
+    margin-bottom: 140px;
+}
+#text_opacity {
+    position: relative;
+    margin-top: -450px;
+    width: 50%;
+    left: 30px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: #fff;
+    text-align: justify;
+    padding: 25px 35px;
+    font-size: 18px;
+    .v_t {
+        float: left;
+        width: 1.5em;
+        line-height: 1em;
+        font-weight: bold;
+        text-align: center;
+        border-left: 2px solid #fff;
+        border-right: 2px solid #fff;
+        opacity: 0.8;
+    }
+    .v_t_r {
+        .v_t;
+        float: right;
+    }
+    .v_t_m {
+        .v_t;
+        display: none;
+    }
+    p {
+        opacity: 0.8;
+        margin: 0 50px;
+    }
+}
+#reg {
+    position: absolute;
+    top: 240px;
+    right: 20px;
+    z-index: 2;
+    height: auto;
+    background-image: url(../img/bgi-security_op.png);
+    background-position: top;
+    background-repeat: repeat-y;
+    border-radius:  25px;
+    color: #fff;
+    padding: 5px 15px 10px 15px;
+    .text_header {
+        font-family: "SegoeUIBold";
+        font-size: 24px;
+        text-decoration: underline;
+        font-weight: bold;
+        background: none;
+    }
+    .partner {
+        margin-top: 15px;
+    }
+    input {
+        width: 100%;
+        border-radius: 10px;
+        border-color: #000;
+        margin: 8px 0 0 0;
+        height: 28px;
+        color: #000;
+        padding: 0 5px;
+    }
+    input::placeholder {
+        text-align: center;
+    }
+    .button {
+        margin-right: 5px;
+    }
+    .reg_form {
+        margin-left: 5px;
+        margin-right: 0px;
+    }
+    .reg_col {
+        padding-left: 0;
+        padding-right: 5px;
+    }
+    .reg_form_left {
+        padding: 0 3px 0 20px;
+    }
+    .reg_form_right {
+        padding: 0 20px 0 3px;
+    }
+    #text_bottom {
+        text-align: justify;
+        color: #fff;
+        font-size: 11px;
+        line-height: 13px;
+        padding: 10px 21px 2px 22px;
+        .text_op {
+            opacity: 0.6;
+        }
+        .text_big {
+            font-weight: 800;
+            opacity: 0.9;
+        }
+        .red_text {
+            color: red;
+            opacity: 1;
+        }
+    }
+}
+
+// App
+
+#app {
+    height: 480px;
+    padding: 0;
+}
+
+.slide1 {
+    background-image: url('../img/app_bgi.jpg') ;
+    background-size: cover;
+    height: auto;
+    &_block {
+        margin: 0 100px 0 550px;
+        .text_head {
+            font-family: "SegoeUIBold";
+            font-size: 28px;
+            font-weight: bold;
+            background: none;
+        }
+        .text_small {
+            font-size: 20px;
+            line-height: 23px;
+        }
+        &_flex {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons {
+            font-size: 20px;
+            color: #fff;
+            background-color: @color_green;
+            border-color: @color_green;
+            height: 25px;
+            line-height: 20px;
+            padding-bottom: 15px;
+        }
+        img {
+            margin: 20px;
+        }
+    }
+ }
+
+.slide2 {
+    .slide1;
+    background-image: url('../img/app_bgi2.jpg');
+    &_text {
+        font-weight: bold;
+    }
+}
+
+// Security
+
+.security {
+    height: auto;
+    background-image: url(../img/bgi-security.png);
+    background-position: top;
+    background-repeat: repeat-y;
+    p {
+        color: #fff;
+        font-size: 16px;
+    }
+}
+
+.icon_security {
+    display: table-cell;
+    float: left;
+    padding-right: 15px;
+    height: 100%;
+    img {
+        height: 70px;
+    }    
+}
+
+.text_security {
+    display: table-cell;
+    vertical-align: top;
+    & :last-child {
+        margin-bottom: 0;
+    }
+}
+
+div.tableContainer {
+    display: table;
+    padding: 20px 80px;
+}
+
+div.tableRow {
+    display: table-row;
+}
+
+// KRON Транспорт
+
+.place_text {
+    .video_text;
+    height: 18px;
+    line-height: 17px;
+    font-size: 14px;
+    width: 257px;
+    margin: 0 auto 13px auto;
+}
+
+.borders_text {
+    border-bottom: solid 3px #000;
+    border-top: solid 3px #000;
+    font-size: 18px;
+    margin: 0 auto 8px auto;
+    width: 257px;
+    text-align: center;
+    line-height: 35px;
+    font-family: "SegoeUIRegular";
+} 
+
+.img_auto {
+    position: absolute;
+    bottom: 0; 
+    display: block;
+    margin: auto auto 35px auto;
+    width: 150px;
+    padding-bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.auto_header {
+    .connect;
+    float: none;
+    font-size: 30px;
+    line-height: 30px;
+    height: 34px;
+    width: 195px;
+    padding: 0;
+    font-weight: bold;
+    margin: 0;
+}
+.auto_header_mob {
+    display: none;
+    .auto_header;
+}
+
+.img_block {
+    height: 210px;
+    position: relative;
+}
+
+#car {
+    width: 130px;
+}
+
+#moto {
+    width: 160px;
+}
+
+.row_auto {
+    margin-top: 70px;
+    padding: 0 15px;
+}
+
+.auto_borders {
+    padding: 0;
+}
+
+.auto_top_block {
+    border-left: solid 6px;
+    border-color: #003D46;
+    height: auto;
+    padding: 0 15px;
+    &_right {
+        border-right: solid 6px #003D46;;
+    }
+}
+
+// KRON SERVICE
+
+// Блок с видео
+
+.kron_part1 {
+    margin: 40px 10px 0 10px;
+}
+
+.kron_part2 {
+    margin: 0 10px 35px 10px;
+}
+
+.video_block {
+    padding: 15px 15px 15px 30px;
+}
+
+.video_text {
+    .text_bgi;
+    height: 1.1em;
+    line-height: 1.1em;
+    width: 201px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background-position: right;
+    padding: 0px 5px 0 5px;
+    margin: 0;
+}
+
+.small_text {
+    font-size: 16px;
+    font-family: "SegoeUIRegular";
+}
+
+.borders {
+    border-bottom: solid 2px #12636b;
+    border-top: solid 2px #12636b;
+    padding-bottom: 5px;
+}
+
+.big_text {
+    font-size: 24px;
+    font-family: "SegoeUIRegular";
+}
+
+.text_header {
+    .video_text;
+    width: 100%;
+    padding: 0 0 0 10px;
+    height: 1.3em;
+    line-height: 1.3em;
+    text-align: left;
+}
+
+.small_text2 {
+    font-size: 14px;  
+}
+
+// Партнеры
+
+#partners {
+    background-image: url(../img/bgi-phone.jpg);
+    background-size: cover;
+    height: 700px;
+    #partners_pay {
+        width: 470px;
+        height: 220px;
+        padding: 15px;
+        margin: 55% 0 0 0;
+        background: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.partners_main_pay {
+    padding-left: 0;
+}
+
+.partners {
+    padding: 0;
+    margin: 0 0 0 0;
+    &_text {
+        width: 100%;
+        height: 1.2em;
+        line-height: 1.2em;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.partners_small_text {
+    width: auto;
+    display: inline-block;
+    padding: 0 10px;
+    font-family: "SegoeUIBold";
+    font-size: 18px;
+    height: 20px;
+    line-height: 17px;
+    float: left;
+}
+
+.partners_left {
+    
+}
+
+.partners_right {
+    padding: 0;
+    background-image: url(../img/partners_people.jpg);
+    background-size: cover;
+    height: 100%;
+    &_opacity {
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        &_text_light_1 {
+            position: absolute;
+            top: 20%;
+            margin-left: 210px;
+            text-align: center;
+            border: solid 1px #000;
+            border-radius: 12px;
+            padding: 0 10px;
+            font-size: 16px;
+            color: #000;
+        }
+        &_text_light_2 {
+            position: absolute;
+            top: 30%;
+            margin: 0 190px 0 2px;
+            text-align: center;
+            border: solid 1px #000;
+            border-radius: 12px;
+            padding: 0 10px;
+            font-size: 16px;
+            color: #000;
+        }
+        &_text_light_3 {
+            position: absolute;
+            bottom: 10%;
+            text-align: center;
+            margin: 0 50px 0 110px;
+            border: solid 1px #000;
+            border-radius: 12px;
+            padding: 0 10px;
+            font-size: 16px;
+            color: #000;
+        }
+    }
+}
+    
+.partners_app {  
+    background-image: url(../img/bgi-security.png);
+    background-position: top;
+    background-repeat: repeat-y;
+    position: absolute;
+    width: 100%;
+	top: 50%;
+    height: 70px;
+    margin-top: -35px;
+    &_header {
+        margin: 0;
+        font-size: 41px;
+        color: #fff;
+        font-family: "SegoeUIBold";
+        font-weight: bold;
+        display: inline-block;
+        border-right: solid 3px #fff;
+        height: 100%;
+        padding: 3px 20px 0 0;
+    }
+    &_text {
+        font-size: 14px;
+        color: #fff;
+        font-family: "SegoeUIBold";
+        display: inline-block;
+        line-height: 18px;
+        height: 100%;
+        margin: 0;
+        padding: 0 0 0 10px;
+    }
+}
+// Блок обратной связи
+
+.feedback {
+    #kron_team {
+        font-family: "SegoeUIBold";
+        font-weight: bold;
+        text-align: right;
+    }
+    label {
+        margin-bottom: 0px;
+    }
+    .textarea_user {
+        padding: 0 30px;
+    .user-form-group;
+    }
+    .user-form-group {
+        font-size: 12px;
+        text-align: left;
+    }
+}
+
+.strip {
+    height: 30px;
+    width: 100%;
+    margin-bottom: 60px;
+    &_bottom {
+        height: 10px;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.connect {
+    .text_bgi;
+    float: right;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin: 30px 0 -13px 0;
+    background-position: right;
+    padding: 0 15px;
+    }
+#block_app_kron {
+    display: flex;
+    justify-content: flex-end;
+    display: none;
+}
+#app_kron {
+    background-color: @color_green;
+    width: 220px;
+    color: #fff;
+    font-size: 22px;
+    font-family: "SegoeUIBold";
+    flex-wrap: wrap;
+    display: flex;
+    border: 2px solid #fff;
+    padding: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    display: none;
+}
+#app_kron:hover,
+#app_kron:focus {
+    text-decoration: none;
+}
+#app_kron:visited {
+    color: #fff;
+}
+#img_mob {
+    display: none;
+    width: inherit;
+    margin-left: -15px;
+    margin-right: 15px;
+    img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    #top {
+        min-width: 320px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .video_block {
+        padding: 15px 15px 15px 15px;
+    }
+    .kron_part1 {
+        margin: 40px 0 0 0;
+    }
+    #text_opacity {
+        .v_t_r {
+            display: none;
+        }
+        .v_t {
+            display: none;
+        }
+        .v_t_m {
+            display: table;
+            text-align: center;
+            font-weight: bold;
+            font-size: 22px;
+            float: none;
+            width: auto;
+            margin: 0 auto;
+            padding: 2px 5px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-top: 1px solid #fff;
+        }
+        p {
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 380px){
+    #top {
+        #text_opacity {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    .container {
+        min-width: 320px;
+    }
+    .video_block {
+        padding: 15px 0;
+    }
+    .col-md-7 {
+        padding: 0;
+    }
+    .auto_header_mob {
+        width: auto;
+        font-size: 22px;
+    }
+    .auto_block_text {
+        width: auto;
+    }
+    .auto_block {
+        padding: 0;
+    }
+    .slide1 {
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .slide1_block {
+        margin: 0 5% 0 43%;
+    }
+}
+
+@media screen and (max-width: 991px){
+    #top {
+        height: auto;
+    }
+    #reg {
+        display: none;
+    }
+    #text_opacity {
+        position: relative;
+        width: auto;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 0;
+        margin: 0;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .kron_part2 .col-md-7 {
+        padding: 0;
+    }
+    .kron_part2 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #slide123 {
+        height: 300px;
+    }
+    div.tableContainer {
+        display: flex;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .icon_security {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 67px;
+    }
+    .auto_top_block {
+        border-left: none;
+        padding: 0;
+        margin-bottom: 60px;
+        height: auto;
+        &_right {
+            border-right: none;
+        }
+    }
+    .auto_block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .auto_block_text {
+        display: flex;
+        flex-direction: column;
+    }
+    .img_block {
+        display: flex;
+        padding-right: 15px;
+        height: auto;
+    }
+    .img_auto {
+        position: relative;
+        margin: 0;
+        width: 130px;
+        height: 103.906px;
+    }
+    .auto_block_flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        min-width: auto;
+    }
+    .auto_block {
+        min-width: auto;
+        padding: 0 15px;
+    }
+    .auto_header {
+        display: none;
+    }
+    .auto_header_mob {
+        display: block;
+        text-align: center;
+        white-space: nowrap;
+        
+    }
+    .borders_text,
+    .place_text {
+        width: auto;
+        height: auto;
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    .place_text {
+        margin-bottom: 0;
+    }
+    .borders_text {
+        line-height: 22px;
+        margin-top: 15px;
+    }
+    .row_auto {
+        margin-top: 10px;
+    }
+    .img_ship {
+        margin: 0;
+        width: 150px;
+        height: 132.078px;
+    }
+    .button_more {
+        position: absolute;
+        right: 0;
+    }
+    #moto {
+        width: 140px;
+        height: 89px;
+        margin: 0;
+    }
+    #app {
+        width: auto;
+    }
+    .connect {
+        margin-top: 15px;
+    }
+    .slide1,
+    .slide2 {
+        background-image: url(../img/app_bgi3.jpg);  
+        background-position: top;
+        background-size: auto;
+    }
+    .slide1_block {
+        .text_head {
+            text-align: center;
+            display: inline-block;
+            border-bottom: 2px solid #000;
+        }
+        .slide1_block_flex a {
+            position: relative;
+        }
+        .slide1_block_flex {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        margin: 0;
+        padding: 0 30px;
+        img {
+            display: none;
+        }
+    }
+    #slide_top1,
+    #slide_top2,
+    #slide_top3 {
+        height: auto;
+        min-width: 320px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .partners_main_pay,
+    .partners_right_opacity_text_light_1, 
+    .partners_right_opacity_text_light_2, 
+    .partners_right_opacity_text_light_3, {
+        display: none;
+    }
+    .partners_right_opacity {
+        background: none;
+    }
+    .security {
+        margin-bottom: 30px;
+    }
+    #top {
+        display: none;
+    }
+    #block_app_kron {
+        display: flex;
+        justify-content: flex-end;
+    }
+    #app_kron {
+        display: flex;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-bottom: 30px;
+    }
+    #img_mob {
+        display: block;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-bottom: -100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
